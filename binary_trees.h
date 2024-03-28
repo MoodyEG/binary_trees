@@ -68,5 +68,8 @@ bst_t *rlchild(binary_tree_t *root, binary_tree_t *node);
 
 int binary_tree_is_avl(const binary_tree_t *tree);
 int is_avl(const binary_tree_t *tree);
+avl_t *avl_insert(avl_t **tree, int value);
+avl_t *avl_ins(avl_t **tree, int value);
+void what_league_needs(avl_t **tree, int value);
 
 #endif /* BINARY_TREES_H */
