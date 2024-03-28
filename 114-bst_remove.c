@@ -18,7 +18,7 @@ bst_t *rchild(binary_tree_t *root, binary_tree_t *node)
 			node->parent->right = node->right;
 	}
 	if (node->left)
-		node->left->parent = node->parent;
+		node->left->parent = node->right;
 	if (node == root)
 		root = node->right;
 	free(node);
