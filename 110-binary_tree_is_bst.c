@@ -29,9 +29,9 @@ int checkgp(const binary_tree_t *tree)
 	papa = pa->parent;
 	while (pa && papa)
 	{
-		if (pa->n < papa->n && tree->n > papa->n)
+		if (pa->n < papa->n && tree->n >= papa->n)
 			return (0);
-		if (pa->n > papa->n && tree->n < papa->n)
+		if (pa->n > papa->n && tree->n <= papa->n)
 			return (0);
 		pa = pa->parent;
 		papa = pa->parent;
