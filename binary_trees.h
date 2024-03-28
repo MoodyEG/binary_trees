@@ -56,9 +56,14 @@ int is_complete(const binary_tree_t *tree, size_t number, size_t size);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree);
+int checkgp(const binary_tree_t *tree);
+int is_bst(const binary_tree_t *tree);
 bst_t *bst_insert(bst_t **tree, int value);
+bst_t *bst_ins(bst_t **tree, int value);
 bst_t *array_to_bst(int *array, size_t size);
 bst_t *bst_search(const bst_t *tree, int value);
-bst_t *bst_remove(bst_t *root, int value); /*task 28*/
+bst_t *bst_remove(bst_t *root, int value);
+bst_t *rchild(binary_tree_t *root, binary_tree_t *node);
+bst_t *rlchild(binary_tree_t *root, binary_tree_t *node);
 
 #endif /* BINARY_TREES_H */
