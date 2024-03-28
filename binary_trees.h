@@ -71,5 +71,6 @@ int is_avl(const binary_tree_t *tree);
 avl_t *avl_insert(avl_t **tree, int value);
 avl_t *avl_ins(avl_t **tree, int value);
 void what_league_needs(avl_t **tree, int value);
+avl_t *array_to_avl(int *array, size_t size);
 
 #endif /* BINARY_TREES_H */
