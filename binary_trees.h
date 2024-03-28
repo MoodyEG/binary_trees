@@ -66,4 +66,7 @@ bst_t *bst_remove(bst_t *root, int value);
 bst_t *rchild(binary_tree_t *root, binary_tree_t *node);
 bst_t *rlchild(binary_tree_t *root, binary_tree_t *node);
 
+int binary_tree_is_avl(const binary_tree_t *tree);
+int is_avl(const binary_tree_t *tree);
+
 #endif /* BINARY_TREES_H */
