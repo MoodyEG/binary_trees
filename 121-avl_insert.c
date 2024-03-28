@@ -27,7 +27,7 @@ void what_league_needs(avl_t **tree, int value)
 		*tree = binary_tree_rotate_left(*tree);
 		return;
 	}
-	if (b < -1 && value < (*tree)->left->n)
+	if (b < -1 && value < (*tree)->right->n)
 	{
 		(*tree)->right = binary_tree_rotate_right((*tree)->right);
 		*tree = binary_tree_rotate_left(*tree);
@@ -44,15 +44,14 @@ void what_league_needs(avl_t **tree, int value)
  */
 avl_t *avl_ins(avl_t **tree, int value)
 {
-	avl_t *node, *temp;
+	avl_t *node;
 
-	temp = (*tree);
-	if (value < temp->n)
+	if (value < (*tree)->n)
 	{
-		if (temp->left == NULL)
+		if ((*tree)->left == NULL)
 		{
-			temp->left = binary_tree_node(temp, value);
-			return (temp->left);
+			(*tree)->left = binary_tree_node(*tree, value);
+			return ((*tree)->left);
 		}
 		else
 		{
@@ -62,12 +61,12 @@ avl_t *avl_ins(avl_t **tree, int value)
 			return (node);
 		}
 	}
-	if (value > temp->n)
+	if (value > (*tree)->n)
 	{
-		if (temp->right == NULL)
+		if ((*tree)->right == NULL)
 		{
-			temp->right = binary_tree_node(temp, value);
-			return (temp->right);
+			(*tree)->right = binary_tree_node(*tree, value);
+			return ((*tree)->right);
 		}
 		else
 		{
